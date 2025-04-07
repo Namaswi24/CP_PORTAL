@@ -1,0 +1,47 @@
+.daily-challenge {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+.daily-container {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);  /* comes first */
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.challenge-box {
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(6px); /* Safari support */
+  backdrop-filter: blur(6px);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.challenge-box a {
+  color: #00bfff;
+  text-decoration: underline;
+}
+
+.btn-solved {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.streak-info {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
