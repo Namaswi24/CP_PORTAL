@@ -1,21 +1,31 @@
 import React from "react";
+import Navbar from "../../components/Navbar/Navbar";
+import StreakCard from "../../components/StreakCard/StreakCard";
 import "./DailyChallenge.css";
 
 const DailyChallenge = () => {
+  const streak = 3;
+  const problem = {
+    title: "Two Sum",
+    platform: "LeetCode",
+    url: "https://leetcode.com/problems/two-sum",
+  };
+
+  const handleSolve = () => {
+    // Logic to update streak, maybe send to backend
+    alert("Problem marked as solved! 🔥");
+  };
+
   return (
-    <div className="daily-challenge">
-      <div className="daily-container">
-        <h2>Daily Challenge</h2>
-        <div className="challenge-box">
-          <h3>Today's Problem</h3>
-          <p><strong>Title:</strong> Two Sum</p>
-          <p><strong>Platform:</strong> LeetCode</p>
-          <a href="https://leetcode.com/problems/two-sum" target="_blank" rel="noreferrer">Solve Now</a>
-          <button className="btn-solved">Mark as Solved</button>
+    <>
+      <Navbar />
+      <div className="daily-challenge">
+        <div className="daily-container">
+          <h2>Daily Challenge</h2>
+          <StreakCard streak={streak} problem={problem} onSolve={handleSolve} />
         </div>
-        <p className="streak-info">🔥 Streak: 3 Days</p>
       </div>
-    </div>
+    </>
   );
 };
 
